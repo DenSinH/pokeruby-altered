@@ -39,6 +39,7 @@ types_*.taghl
 Thumbs.db
 build/
 .idea/
+.vscode/
 *.DS_Store
 *.pl
 .vs/

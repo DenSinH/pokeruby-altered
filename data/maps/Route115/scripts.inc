@@ -64,5 +64,5 @@ Route115_EventScript_150A1A:: @ 8150A1A
 .else
 	trainerbattle_single TRAINER_514, Route115_Text_1BCEE0, Route115_Text_1BCF16
 	msgbox Route115_Text_1BCF3D, MSGBOX_AUTOCLOSE
-.endc
+.endif
 	end

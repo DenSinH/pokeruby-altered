@@ -170,7 +170,7 @@ Route110_TrickHouseEnd_EventScript_161BAF:: @ 8161BAF
 	givedecoration DECOR_BLUE_TENT
 	.else
 	givedecoration DECOR_RED_TENT
-	.endc
+	.endif
 	compare VAR_RESULT, 0
 	call_if_eq Route110_TrickHouseEnd_EventScript_161C61
 	msgbox Route110_TrickHouseEnd_Text_19C85C, MSGBOX_DEFAULT

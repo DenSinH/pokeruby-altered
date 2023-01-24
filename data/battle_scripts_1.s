@@ -237,7 +237,6 @@ BattleScript_EffectEvasionDownHit: @ 81D6F14
 BattleScript_EffectEvasionUp2: @ 81D6F14
 BattleScript_EffectFalseSwipe: @ 81D6F14
 BattleScript_EffectHighCritical: @ 81D6F14
-BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectPursuit: @ 81D6F14
 BattleScript_EffectQuickAttack: @ 81D6F14
 BattleScript_EffectSpecialAttackDown2: @ 81D6F14

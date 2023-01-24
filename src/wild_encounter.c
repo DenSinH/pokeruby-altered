@@ -16,7 +16,7 @@
 #include "constants/species.h"
 #include "tv.h"
 
-#include "data/wild_encounters.h"
+ #include "data/wild_encounters.h"
 
 const struct WildPokemon gWildFeebasRoute119Data = {20, 25, SPECIES_FEEBAS};
 
