@@ -4,9 +4,9 @@
 #include "constants/songs.h"
 #include "constants/pokemon.h"
 	.include "include/macros.inc"
+	.include "constants/battle_script_constants.inc"
 	.include "include/macros/battle_script.inc"
 	.include "constants/constants.inc"
-	.include "constants/battle_script_constants.inc"
 
 	.section script_data, "aw", %progbits
 

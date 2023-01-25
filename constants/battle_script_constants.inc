@@ -135,28 +135,28 @@
 	.set ATK4F_DONT_CHECK_STATUSES, 0x80
 
 @ battle scripting struct
-	.equiv sANIM_TURN,         gSharedMem + 0x16002
-	.equiv sBANK,              gSharedMem + 0x16003
-	.equiv sMOVEEND_STATE,     gSharedMem + 0x1600C
-	.equiv sGIVEEXP_STATE,     gSharedMem + 0x1600F
-	.equiv sPAINSPLIT_HP,      gSharedMem + 0x16014
-	.equiv sLEARNMOVE_STATE,   gSharedMem + 0x1601A
-	.equiv sSTATCHANGER,       gSharedMem + 0x1601E
-	.equiv sDMG_MULTIPLIER,    gSharedMem + 0x1601F
-	.equiv sTWOTURN_STRINGID,  gSharedMem + 0x16055
-	.equiv sBATTLE_STYLE,      gSharedMem + 0x16084
-	.equiv sBIDE_DMG,          gSharedMem + 0x16090
-	.equiv sLVLBOX_STATE,      gSharedMem + 0x1609C
-	.equiv sANIM_TARGETS_HIT,  gSharedMem + 0x160A1
-	.equiv sANIM_ARG1,         gSharedMem + 0x160A4
-	.equiv sANIM_ARG2,         gSharedMem + 0x160A5
-	.equiv sFIELD_1B,          gSharedMem + 0x160DC
-	.equiv sTRIPLE_KICK_POWER, gSharedMem + 0x160DE
-	.equiv sMULTIHIT_STRING,   gSharedMem + 0x160E0
-	.equiv sBANK_WITH_ABILITY, gSharedMem + 0x160F8
-	.equiv sMULTIHIT_EFFECT,   gSharedMem + 0x16112
+#define sANIM_TURN          gSharedMem + 0x16002
+#define sBANK               gSharedMem + 0x16003
+#define sMOVEEND_STATE      gSharedMem + 0x1600C
+#define sGIVEEXP_STATE      gSharedMem + 0x1600F
+#define sPAINSPLIT_HP       gSharedMem + 0x16014
+#define sLEARNMOVE_STATE    gSharedMem + 0x1601A
+#define sSTATCHANGER        gSharedMem + 0x1601E
+#define sDMG_MULTIPLIER     gSharedMem + 0x1601F
+#define sTWOTURN_STRINGID   gSharedMem + 0x16055
+#define sBATTLE_STYLE       gSharedMem + 0x16084
+#define sBIDE_DMG           gSharedMem + 0x16090
+#define sLVLBOX_STATE       gSharedMem + 0x1609C
+#define sANIM_TARGETS_HIT   gSharedMem + 0x160A1
+#define sANIM_ARG1          gSharedMem + 0x160A4
+#define sANIM_ARG2          gSharedMem + 0x160A5
+#define sFIELD_1B           gSharedMem + 0x160DC
+#define sTRIPLE_KICK_POWER  gSharedMem + 0x160DE
+#define sMULTIHIT_STRING    gSharedMem + 0x160E0
+#define sBANK_WITH_ABILITY  gSharedMem + 0x160F8
+#define sMULTIHIT_EFFECT    gSharedMem + 0x16112
 
 
 @ battle communication struct
-	.equiv cEFFECT_CHOOSER, gBattleCommunication + 3
-	.equiv cMULTISTRING_CHOOSER, gBattleCommunication + 5
+#define cEFFECT_CHOOSER  gBattleCommunication + 3
+#define cMULTISTRING_CHOOSER  gBattleCommunication + 5
