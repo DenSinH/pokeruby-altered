@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_encounter_magma_grp, voicegroup084
+	#define mus_encounter_magma_grp voicegroup084
 	.equ	mus_encounter_magma_pri, 0
 	.equ	mus_encounter_magma_rev, reverb_set+50
 	.equ	mus_encounter_magma_mvl, 127

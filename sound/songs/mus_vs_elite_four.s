@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_vs_elite_four_grp, voicegroup108
+	#define mus_vs_elite_four_grp voicegroup108
 	.equ	mus_vs_elite_four_pri, 1
 	.equ	mus_vs_elite_four_rev, reverb_set+50
 	.equ	mus_vs_elite_four_mvl, 127

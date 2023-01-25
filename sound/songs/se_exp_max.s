@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_exp_max_grp, voicegroup111
+	#define se_exp_max_grp voicegroup111
 	.equ	se_exp_max_pri, 5
 	.equ	se_exp_max_rev, reverb_set+50
 	.equ	se_exp_max_mvl, 127

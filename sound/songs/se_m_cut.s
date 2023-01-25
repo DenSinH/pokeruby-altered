@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_cut_grp, voicegroup111
+	#define se_m_cut_grp voicegroup111
 	.equ	se_m_cut_pri, 4
 	.equ	se_m_cut_rev, reverb_set+50
 	.equ	se_m_cut_mvl, 127

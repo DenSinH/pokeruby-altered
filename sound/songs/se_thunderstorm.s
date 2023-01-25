@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_thunderstorm_grp, voicegroup111
+	#define se_thunderstorm_grp voicegroup111
 	.equ	se_thunderstorm_pri, 2
 	.equ	se_thunderstorm_rev, reverb_set+50
 	.equ	se_thunderstorm_mvl, 127

@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_ball_tray_enter_grp, voicegroup111
+	#define se_ball_tray_enter_grp voicegroup111
 	.equ	se_ball_tray_enter_pri, 5
 	.equ	se_ball_tray_enter_rev, reverb_set+50
 	.equ	se_ball_tray_enter_mvl, 127

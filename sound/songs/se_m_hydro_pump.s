@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_hydro_pump_grp, voicegroup111
+	#define se_m_hydro_pump_grp voicegroup111
 	.equ	se_m_hydro_pump_pri, 4
 	.equ	se_m_hydro_pump_rev, reverb_set+50
 	.equ	se_m_hydro_pump_mvl, 127

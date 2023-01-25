@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_encounter_brendan_grp, voicegroup064
+	#define mus_encounter_brendan_grp voicegroup064
 	.equ	mus_encounter_brendan_pri, 0
 	.equ	mus_encounter_brendan_rev, reverb_set+50
 	.equ	mus_encounter_brendan_mvl, 127

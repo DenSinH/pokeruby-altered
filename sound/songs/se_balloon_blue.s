@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_balloon_blue_grp, voicegroup111
+	#define se_balloon_blue_grp voicegroup111
 	.equ	se_balloon_blue_pri, 4
 	.equ	se_balloon_blue_rev, reverb_set+50
 	.equ	se_balloon_blue_mvl, 127

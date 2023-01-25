@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_explosion_grp, voicegroup111
+	#define se_m_explosion_grp voicegroup111
 	.equ	se_m_explosion_pri, 4
 	.equ	se_m_explosion_rev, reverb_set+50
 	.equ	se_m_explosion_mvl, 127

@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_card_grp, voicegroup111
+	#define se_card_grp voicegroup111
 	.equ	se_card_pri, 4
 	.equ	se_card_rev, reverb_set+50
 	.equ	se_card_mvl, 127

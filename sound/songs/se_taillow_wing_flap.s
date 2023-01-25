@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_taillow_wing_flap_grp, voicegroup111
+	#define se_taillow_wing_flap_grp voicegroup111
 	.equ	se_taillow_wing_flap_pri, 5
 	.equ	se_taillow_wing_flap_rev, reverb_set+50
 	.equ	se_taillow_wing_flap_mvl, 127

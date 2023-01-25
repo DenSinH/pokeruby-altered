@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_baton_pass_grp, voicegroup111
+	#define se_m_baton_pass_grp voicegroup111
 	.equ	se_m_baton_pass_pri, 4
 	.equ	se_m_baton_pass_rev, reverb_set+50
 	.equ	se_m_baton_pass_mvl, 127

@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_not_effective_grp, voicegroup110
+	#define se_not_effective_grp voicegroup110
 	.equ	se_not_effective_pri, 5
 	.equ	se_not_effective_rev, reverb_set+50
 	.equ	se_not_effective_mvl, 127

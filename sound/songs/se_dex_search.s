@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_dex_search_grp, voicegroup110
+	#define se_dex_search_grp voicegroup110
 	.equ	se_dex_search_pri, 5
 	.equ	se_dex_search_rev, reverb_set+50
 	.equ	se_dex_search_mvl, 127

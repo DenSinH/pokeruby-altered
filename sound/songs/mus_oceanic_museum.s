@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_oceanic_museum_grp, voicegroup020
+	#define mus_oceanic_museum_grp voicegroup020
 	.equ	mus_oceanic_museum_pri, 0
 	.equ	mus_oceanic_museum_rev, reverb_set+50
 	.equ	mus_oceanic_museum_mvl, 127

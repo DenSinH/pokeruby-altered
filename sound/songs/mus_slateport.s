@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_slateport_grp, voicegroup076
+	#define mus_slateport_grp voicegroup076
 	.equ	mus_slateport_pri, 0
 	.equ	mus_slateport_rev, reverb_set+50
 	.equ	mus_slateport_mvl, 127

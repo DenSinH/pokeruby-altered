@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_truck_move_grp, voicegroup111
+	#define se_truck_move_grp voicegroup111
 	.equ	se_truck_move_pri, 4
 	.equ	se_truck_move_rev, reverb_set+50
 	.equ	se_truck_move_mvl, 127

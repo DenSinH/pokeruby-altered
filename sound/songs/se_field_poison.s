@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_field_poison_grp, voicegroup110
+	#define se_field_poison_grp voicegroup110
 	.equ	se_field_poison_pri, 5
 	.equ	se_field_poison_rev, reverb_set+50
 	.equ	se_field_poison_mvl, 127

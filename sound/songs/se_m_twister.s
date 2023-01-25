@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_twister_grp, voicegroup111
+	#define se_m_twister_grp voicegroup111
 	.equ	se_m_twister_pri, 4
 	.equ	se_m_twister_rev, reverb_set+50
 	.equ	se_m_twister_mvl, 127

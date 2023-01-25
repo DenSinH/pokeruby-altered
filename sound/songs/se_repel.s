@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_repel_grp, voicegroup110
+	#define se_repel_grp voicegroup110
 	.equ	se_repel_pri, 4
 	.equ	se_repel_rev, reverb_set+50
 	.equ	se_repel_mvl, 127

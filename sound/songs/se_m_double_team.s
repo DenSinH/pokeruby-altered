@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_double_team_grp, voicegroup111
+	#define se_m_double_team_grp voicegroup111
 	.equ	se_m_double_team_pri, 4
 	.equ	se_m_double_team_rev, reverb_set+50
 	.equ	se_m_double_team_mvl, 127

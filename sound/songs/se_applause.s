@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_applause_grp, voicegroup111
+	#define se_applause_grp voicegroup111
 	.equ	se_applause_pri, 5
 	.equ	se_applause_rev, reverb_set+50
 	.equ	se_applause_mvl, 127

@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_vs_regi_grp, voicegroup105
+	#define mus_vs_regi_grp voicegroup105
 	.equ	mus_vs_regi_pri, 1
 	.equ	mus_vs_regi_rev, reverb_set+50
 	.equ	mus_vs_regi_mvl, 127

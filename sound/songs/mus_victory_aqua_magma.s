@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_victory_aqua_magma_grp, voicegroup067
+	#define mus_victory_aqua_magma_grp voicegroup067
 	.equ	mus_victory_aqua_magma_pri, 0
 	.equ	mus_victory_aqua_magma_rev, reverb_set+50
 	.equ	mus_victory_aqua_magma_mvl, 127

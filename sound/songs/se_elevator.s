@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_elevator_grp, voicegroup111
+	#define se_elevator_grp voicegroup111
 	.equ	se_elevator_pri, 4
 	.equ	se_elevator_rev, reverb_set+50
 	.equ	se_elevator_mvl, 127

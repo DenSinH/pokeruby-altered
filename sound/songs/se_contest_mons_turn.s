@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_contest_mons_turn_grp, voicegroup111
+	#define se_contest_mons_turn_grp voicegroup111
 	.equ	se_contest_mons_turn_pri, 5
 	.equ	se_contest_mons_turn_rev, reverb_set+50
 	.equ	se_contest_mons_turn_mvl, 127

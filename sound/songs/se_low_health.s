@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_low_health_grp, voicegroup110
+	#define se_low_health_grp voicegroup110
 	.equ	se_low_health_pri, 3
 	.equ	se_low_health_rev, reverb_set+50
 	.equ	se_low_health_mvl, 127

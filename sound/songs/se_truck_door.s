@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_truck_door_grp, voicegroup111
+	#define se_truck_door_grp voicegroup111
 	.equ	se_truck_door_pri, 4
 	.equ	se_truck_door_rev, reverb_set+50
 	.equ	se_truck_door_mvl, 127

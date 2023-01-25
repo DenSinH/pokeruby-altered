@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_ice_break_grp, voicegroup111
+	#define se_ice_break_grp voicegroup111
 	.equ	se_ice_break_pri, 4
 	.equ	se_ice_break_rev, reverb_set+50
 	.equ	se_ice_break_mvl, 127

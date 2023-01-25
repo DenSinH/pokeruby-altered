@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_follow_me_grp, voicegroup063
+	#define mus_follow_me_grp voicegroup063
 	.equ	mus_follow_me_pri, 0
 	.equ	mus_follow_me_rev, reverb_set+50
 	.equ	mus_follow_me_mvl, 127

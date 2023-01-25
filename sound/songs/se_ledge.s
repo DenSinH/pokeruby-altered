@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_ledge_grp, voicegroup110
+	#define se_ledge_grp voicegroup110
 	.equ	se_ledge_pri, 4
 	.equ	se_ledge_rev, reverb_set+50
 	.equ	se_ledge_mvl, 127

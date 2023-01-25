@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_berry_blender_grp, voicegroup111
+	#define se_berry_blender_grp voicegroup111
 	.equ	se_berry_blender_pri, 4
 	.equ	se_berry_blender_rev, reverb_set+50
 	.equ	se_berry_blender_mvl, 127

@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_contest_condition_lose_grp, voicegroup110
+	#define se_contest_condition_lose_grp voicegroup110
 	.equ	se_contest_condition_lose_pri, 4
 	.equ	se_contest_condition_lose_rev, reverb_set+50
 	.equ	se_contest_condition_lose_mvl, 127

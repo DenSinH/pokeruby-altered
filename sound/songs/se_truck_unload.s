@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_truck_unload_grp, voicegroup110
+	#define se_truck_unload_grp voicegroup110
 	.equ	se_truck_unload_pri, 4
 	.equ	se_truck_unload_rev, reverb_set+50
 	.equ	se_truck_unload_mvl, 127

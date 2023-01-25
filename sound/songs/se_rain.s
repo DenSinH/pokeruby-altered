@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_rain_grp, voicegroup111
+	#define se_rain_grp voicegroup111
 	.equ	se_rain_pri, 2
 	.equ	se_rain_rev, reverb_set+50
 	.equ	se_rain_mvl, 127

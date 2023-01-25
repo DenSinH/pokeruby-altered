@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_ever_grande_grp, voicegroup065
+	#define mus_ever_grande_grp voicegroup065
 	.equ	mus_ever_grande_pri, 0
 	.equ	mus_ever_grande_rev, reverb_set+50
 	.equ	mus_ever_grande_mvl, 127

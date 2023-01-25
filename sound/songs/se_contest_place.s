@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_contest_place_grp, voicegroup110
+	#define se_contest_place_grp voicegroup110
 	.equ	se_contest_place_pri, 4
 	.equ	se_contest_place_rev, reverb_set+50
 	.equ	se_contest_place_mvl, 127

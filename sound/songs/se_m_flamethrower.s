@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_flamethrower_grp, voicegroup111
+	#define se_m_flamethrower_grp voicegroup111
 	.equ	se_m_flamethrower_pri, 4
 	.equ	se_m_flamethrower_rev, reverb_set+50
 	.equ	se_m_flamethrower_mvl, 127

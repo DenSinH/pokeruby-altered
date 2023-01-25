@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_note_b_grp, voicegroup111
+	#define se_note_b_grp voicegroup111
 	.equ	se_note_b_pri, 4
 	.equ	se_note_b_rev, reverb_set+50
 	.equ	se_note_b_mvl, 127

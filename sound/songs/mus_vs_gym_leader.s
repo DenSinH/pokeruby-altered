@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_vs_gym_leader_grp, voicegroup103
+	#define mus_vs_gym_leader_grp voicegroup103
 	.equ	mus_vs_gym_leader_pri, 1
 	.equ	mus_vs_gym_leader_rev, reverb_set+50
 	.equ	mus_vs_gym_leader_mvl, 127

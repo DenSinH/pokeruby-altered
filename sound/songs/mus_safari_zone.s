@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_safari_zone_grp, voicegroup071
+	#define mus_safari_zone_grp voicegroup071
 	.equ	mus_safari_zone_pri, 0
 	.equ	mus_safari_zone_rev, reverb_set+50
 	.equ	mus_safari_zone_mvl, 127

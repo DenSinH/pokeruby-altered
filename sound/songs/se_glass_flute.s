@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_glass_flute_grp, voicegroup111
+	#define se_glass_flute_grp voicegroup111
 	.equ	se_glass_flute_pri, 5
 	.equ	se_glass_flute_rev, reverb_set+50
 	.equ	se_glass_flute_mvl, 127

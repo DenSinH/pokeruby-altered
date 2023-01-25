@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_success_grp, voicegroup110
+	#define se_success_grp voicegroup110
 	.equ	se_success_pri, 4
 	.equ	se_success_rev, reverb_set+50
 	.equ	se_success_mvl, 127

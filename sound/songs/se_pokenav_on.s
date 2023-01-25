@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_pokenav_on_grp, voicegroup110
+	#define se_pokenav_on_grp voicegroup110
 	.equ	se_pokenav_on_pri, 5
 	.equ	se_pokenav_on_rev, reverb_set+50
 	.equ	se_pokenav_on_mvl, 127

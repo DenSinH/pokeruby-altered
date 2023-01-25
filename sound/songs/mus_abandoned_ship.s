@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_abandoned_ship_grp, voicegroup027
+	#define mus_abandoned_ship_grp voicegroup027
 	.equ	mus_abandoned_ship_pri, 0
 	.equ	mus_abandoned_ship_rev, reverb_set+50
 	.equ	mus_abandoned_ship_mvl, 127

@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_evolution_grp, voicegroup023
+	#define mus_evolution_grp voicegroup023
 	.equ	mus_evolution_pri, 0
 	.equ	mus_evolution_rev, reverb_set+50
 	.equ	mus_evolution_mvl, 127

@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_radio_tower_takeover_grp, voicegroup113
+	#define mus_radio_tower_takeover_grp voicegroup113
 	.equ	mus_radio_tower_takeover_pri, 0
 	.equ	mus_radio_tower_takeover_rev, reverb_set+50
 	.equ	mus_radio_tower_takeover_mvl, 127

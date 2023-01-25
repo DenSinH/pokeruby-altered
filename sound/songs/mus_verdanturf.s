@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_verdanturf_grp, voicegroup041
+	#define mus_verdanturf_grp voicegroup041
 	.equ	mus_verdanturf_pri, 0
 	.equ	mus_verdanturf_rev, reverb_set+50
 	.equ	mus_verdanturf_mvl, 127

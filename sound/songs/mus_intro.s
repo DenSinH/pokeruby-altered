@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_intro_grp, voicegroup057
+	#define mus_intro_grp voicegroup057
 	.equ	mus_intro_pri, 0
 	.equ	mus_intro_rev, reverb_set+50
 	.equ	mus_intro_mvl, 127

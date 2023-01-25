@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_birch_lab_grp, voicegroup030
+	#define mus_birch_lab_grp voicegroup030
 	.equ	mus_birch_lab_pri, 0
 	.equ	mus_birch_lab_rev, reverb_set+50
 	.equ	mus_birch_lab_mvl, 127

@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_vs_aqua_magma_grp, voicegroup101
+	#define mus_vs_aqua_magma_grp voicegroup101
 	.equ	mus_vs_aqua_magma_pri, 1
 	.equ	mus_vs_aqua_magma_rev, reverb_set+50
 	.equ	mus_vs_aqua_magma_mvl, 127

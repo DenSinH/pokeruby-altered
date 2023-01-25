@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_contest_icon_change_grp, voicegroup111
+	#define se_contest_icon_change_grp voicegroup111
 	.equ	se_contest_icon_change_pri, 5
 	.equ	se_contest_icon_change_rev, reverb_set+50
 	.equ	se_contest_icon_change_mvl, 127

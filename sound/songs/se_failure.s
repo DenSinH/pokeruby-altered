@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_failure_grp, voicegroup110
+	#define se_failure_grp voicegroup110
 	.equ	se_failure_pri, 4
 	.equ	se_failure_rev, reverb_set+50
 	.equ	se_failure_mvl, 127

@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_ding_dong_grp, voicegroup110
+	#define se_ding_dong_grp voicegroup110
 	.equ	se_ding_dong_pri, 5
 	.equ	se_ding_dong_rev, reverb_set+50
 	.equ	se_ding_dong_mvl, 127

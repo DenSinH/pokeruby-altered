@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_vs_aqua_magma_leader_grp, voicegroup109
+	#define mus_vs_aqua_magma_leader_grp voicegroup109
 	.equ	mus_vs_aqua_magma_leader_pri, 1
 	.equ	mus_vs_aqua_magma_leader_rev, reverb_set+50
 	.equ	mus_vs_aqua_magma_leader_mvl, 127

@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_caught_grp, voicegroup022
+	#define mus_caught_grp voicegroup022
 	.equ	mus_caught_pri, 0
 	.equ	mus_caught_rev, reverb_set+50
 	.equ	mus_caught_mvl, 127

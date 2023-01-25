@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_poke_center_grp, voicegroup043
+	#define mus_poke_center_grp voicegroup043
 	.equ	mus_poke_center_pri, 0
 	.equ	mus_poke_center_rev, reverb_set+50
 	.equ	mus_poke_center_mvl, 127

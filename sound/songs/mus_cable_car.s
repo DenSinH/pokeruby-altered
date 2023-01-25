@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_cable_car_grp, voicegroup068
+	#define mus_cable_car_grp voicegroup068
 	.equ	mus_cable_car_pri, 0
 	.equ	mus_cable_car_rev, reverb_set+50
 	.equ	mus_cable_car_mvl, 127

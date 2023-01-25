@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_switch_grp, voicegroup110
+	#define se_switch_grp voicegroup110
 	.equ	se_switch_pri, 4
 	.equ	se_switch_rev, reverb_set+50
 	.equ	se_switch_mvl, 127

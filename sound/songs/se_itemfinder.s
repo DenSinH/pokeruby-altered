@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_itemfinder_grp, voicegroup110
+	#define se_itemfinder_grp voicegroup110
 	.equ	se_itemfinder_pri, 5
 	.equ	se_itemfinder_rev, reverb_set+50
 	.equ	se_itemfinder_mvl, 127

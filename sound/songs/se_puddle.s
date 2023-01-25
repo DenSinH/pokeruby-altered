@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_puddle_grp, voicegroup111
+	#define se_puddle_grp voicegroup111
 	.equ	se_puddle_pri, 4
 	.equ	se_puddle_rev, reverb_set+50
 	.equ	se_puddle_mvl, 127

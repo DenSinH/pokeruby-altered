@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_mud_ball_grp, voicegroup111
+	#define se_mud_ball_grp voicegroup111
 	.equ	se_mud_ball_pri, 4
 	.equ	se_mud_ball_rev, reverb_set+50
 	.equ	se_mud_ball_mvl, 127

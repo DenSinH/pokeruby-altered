@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_charge_grp, voicegroup111
+	#define se_m_charge_grp voicegroup111
 	.equ	se_m_charge_pri, 4
 	.equ	se_m_charge_rev, reverb_set+50
 	.equ	se_m_charge_mvl, 127

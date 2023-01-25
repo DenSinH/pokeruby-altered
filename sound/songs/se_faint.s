@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_faint_grp, voicegroup110
+	#define se_faint_grp voicegroup110
 	.equ	se_faint_pri, 5
 	.equ	se_faint_rev, reverb_set+50
 	.equ	se_faint_mvl, 127

@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_c_vs_legend_beast_grp, voicegroup000
+	#define mus_c_vs_legend_beast_grp voicegroup000
 	.equ	mus_c_vs_legend_beast_pri, 0
 	.equ	mus_c_vs_legend_beast_rev, reverb_set+50
 	.equ	mus_c_vs_legend_beast_mvl, 127

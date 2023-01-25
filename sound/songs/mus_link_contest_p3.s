@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_link_contest_p3_grp, voicegroup038
+	#define mus_link_contest_p3_grp voicegroup038
 	.equ	mus_link_contest_p3_pri, 0
 	.equ	mus_link_contest_p3_rev, reverb_set+50
 	.equ	mus_link_contest_p3_mvl, 127

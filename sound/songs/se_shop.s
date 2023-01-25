@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_shop_grp, voicegroup110
+	#define se_shop_grp voicegroup110
 	.equ	se_shop_pri, 5
 	.equ	se_shop_rev, reverb_set+50
 	.equ	se_shop_mvl, 127

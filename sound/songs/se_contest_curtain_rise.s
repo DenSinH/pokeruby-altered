@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_contest_curtain_rise_grp, voicegroup111
+	#define se_contest_curtain_rise_grp voicegroup111
 	.equ	se_contest_curtain_rise_pri, 5
 	.equ	se_contest_curtain_rise_rev, reverb_set+50
 	.equ	se_contest_curtain_rise_mvl, 127

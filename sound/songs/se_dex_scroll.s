@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_dex_scroll_grp, voicegroup110
+	#define se_dex_scroll_grp voicegroup110
 	.equ	se_dex_scroll_pri, 5
 	.equ	se_dex_scroll_rev, reverb_set+50
 	.equ	se_dex_scroll_mvl, 127

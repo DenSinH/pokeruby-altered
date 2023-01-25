@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_fortree_grp, voicegroup029
+	#define mus_fortree_grp voicegroup029
 	.equ	mus_fortree_pri, 0
 	.equ	mus_fortree_rev, reverb_set+50
 	.equ	mus_fortree_mvl, 127

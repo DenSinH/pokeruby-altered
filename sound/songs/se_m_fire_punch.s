@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_fire_punch_grp, voicegroup111
+	#define se_m_fire_punch_grp voicegroup111
 	.equ	se_m_fire_punch_pri, 4
 	.equ	se_m_fire_punch_rev, reverb_set+50
 	.equ	se_m_fire_punch_mvl, 127

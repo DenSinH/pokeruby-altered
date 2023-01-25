@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_obtain_item_grp, voicegroup009
+	#define mus_obtain_item_grp voicegroup009
 	.equ	mus_obtain_item_pri, 5
 	.equ	mus_obtain_item_rev, reverb_set+50
 	.equ	mus_obtain_item_mvl, 127

@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_orb_grp, voicegroup111
+	#define se_orb_grp voicegroup111
 	.equ	se_orb_pri, 5
 	.equ	se_orb_rev, reverb_set+50
 	.equ	se_orb_mvl, 127

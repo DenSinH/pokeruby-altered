@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_unlock_grp, voicegroup111
+	#define se_unlock_grp voicegroup111
 	.equ	se_unlock_pri, 4
 	.equ	se_unlock_rev, reverb_set+50
 	.equ	se_unlock_mvl, 127

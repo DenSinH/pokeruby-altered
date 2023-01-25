@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_door_grp, voicegroup110
+	#define se_door_grp voicegroup110
 	.equ	se_door_pri, 5
 	.equ	se_door_rev, reverb_set+50
 	.equ	se_door_mvl, 127

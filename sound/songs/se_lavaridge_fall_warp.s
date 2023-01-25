@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_lavaridge_fall_warp_grp, voicegroup110
+	#define se_lavaridge_fall_warp_grp voicegroup110
 	.equ	se_lavaridge_fall_warp_pri, 4
 	.equ	se_lavaridge_fall_warp_rev, reverb_set+50
 	.equ	se_lavaridge_fall_warp_mvl, 127

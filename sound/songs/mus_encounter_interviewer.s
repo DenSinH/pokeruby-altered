@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_encounter_interviewer_grp, voicegroup096
+	#define mus_encounter_interviewer_grp voicegroup096
 	.equ	mus_encounter_interviewer_pri, 0
 	.equ	mus_encounter_interviewer_rev, reverb_set+50
 	.equ	mus_encounter_interviewer_mvl, 127

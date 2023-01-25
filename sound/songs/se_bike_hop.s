@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_bike_hop_grp, voicegroup110
+	#define se_bike_hop_grp voicegroup110
 	.equ	se_bike_hop_pri, 4
 	.equ	se_bike_hop_rev, reverb_set+50
 	.equ	se_bike_hop_mvl, 127

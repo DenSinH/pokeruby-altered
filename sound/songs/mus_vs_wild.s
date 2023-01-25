@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_vs_wild_grp, voicegroup100
+	#define mus_vs_wild_grp voicegroup100
 	.equ	mus_vs_wild_pri, 1
 	.equ	mus_vs_wild_rev, reverb_set+50
 	.equ	mus_vs_wild_mvl, 127

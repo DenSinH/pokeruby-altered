@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_littleroot_test_grp, voicegroup031
+	#define mus_littleroot_test_grp voicegroup031
 	.equ	mus_littleroot_test_pri, 0
 	.equ	mus_littleroot_test_rev, reverb_set+50
 	.equ	mus_littleroot_test_mvl, 127

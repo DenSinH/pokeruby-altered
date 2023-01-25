@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_giga_drain_grp, voicegroup111
+	#define se_m_giga_drain_grp voicegroup111
 	.equ	se_m_giga_drain_pri, 4
 	.equ	se_m_giga_drain_rev, reverb_set+50
 	.equ	se_m_giga_drain_mvl, 127

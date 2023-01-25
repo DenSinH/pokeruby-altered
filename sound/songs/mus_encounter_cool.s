@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_encounter_cool_grp, voicegroup060
+	#define mus_encounter_cool_grp voicegroup060
 	.equ	mus_encounter_cool_pri, 0
 	.equ	mus_encounter_cool_rev, reverb_set+50
 	.equ	mus_encounter_cool_mvl, 127

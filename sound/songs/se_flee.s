@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_flee_grp, voicegroup110
+	#define se_flee_grp voicegroup110
 	.equ	se_flee_pri, 5
 	.equ	se_flee_rev, reverb_set+50
 	.equ	se_flee_mvl, 127

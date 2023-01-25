@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_lilycove_grp, voicegroup051
+	#define mus_lilycove_grp voicegroup051
 	.equ	mus_lilycove_pri, 0
 	.equ	mus_lilycove_rev, reverb_set+50
 	.equ	mus_lilycove_mvl, 127

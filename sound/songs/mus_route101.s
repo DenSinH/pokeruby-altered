@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_route101_grp, voicegroup008
+	#define mus_route101_grp voicegroup008
 	.equ	mus_route101_pri, 0
 	.equ	mus_route101_rev, reverb_set+50
 	.equ	mus_route101_mvl, 127

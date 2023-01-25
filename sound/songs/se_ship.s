@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_ship_grp, voicegroup110
+	#define se_ship_grp voicegroup110
 	.equ	se_ship_pri, 4
 	.equ	se_ship_rev, reverb_set+50
 	.equ	se_ship_mvl, 127

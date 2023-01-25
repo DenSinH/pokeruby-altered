@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_credits_grp, voicegroup098
+	#define mus_credits_grp voicegroup098
 	.equ	mus_credits_pri, 0
 	.equ	mus_credits_rev, reverb_set+50
 	.equ	mus_credits_mvl, 127

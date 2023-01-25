@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_move_deleted_grp, voicegroup009
+	#define mus_move_deleted_grp voicegroup009
 	.equ	mus_move_deleted_pri, 5
 	.equ	mus_move_deleted_rev, reverb_set+50
 	.equ	mus_move_deleted_mvl, 127

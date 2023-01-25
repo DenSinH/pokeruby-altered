@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_encounter_may_grp, voicegroup058
+	#define mus_encounter_may_grp voicegroup058
 	.equ	mus_encounter_may_pri, 0
 	.equ	mus_encounter_may_rev, reverb_set+50
 	.equ	mus_encounter_may_mvl, 127

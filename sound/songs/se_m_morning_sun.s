@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_morning_sun_grp, voicegroup111
+	#define se_m_morning_sun_grp voicegroup111
 	.equ	se_m_morning_sun_pri, 5
 	.equ	se_m_morning_sun_rev, reverb_set+50
 	.equ	se_m_morning_sun_mvl, 127

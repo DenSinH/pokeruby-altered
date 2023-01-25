@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_petalburg_grp, voicegroup012
+	#define mus_petalburg_grp voicegroup012
 	.equ	mus_petalburg_pri, 0
 	.equ	mus_petalburg_rev, reverb_set+50
 	.equ	mus_petalburg_mvl, 127

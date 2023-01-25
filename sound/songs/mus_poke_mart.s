@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_poke_mart_grp, voicegroup047
+	#define mus_poke_mart_grp voicegroup047
 	.equ	mus_poke_mart_pri, 0
 	.equ	mus_poke_mart_rev, reverb_set+50
 	.equ	mus_poke_mart_mvl, 127

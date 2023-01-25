@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_aqua_magma_hideout_grp, voicegroup073
+	#define mus_aqua_magma_hideout_grp voicegroup073
 	.equ	mus_aqua_magma_hideout_pri, 0
 	.equ	mus_aqua_magma_hideout_rev, reverb_set+50
 	.equ	mus_aqua_magma_hideout_mvl, 127

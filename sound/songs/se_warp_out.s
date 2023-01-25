@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_warp_out_grp, voicegroup110
+	#define se_warp_out_grp voicegroup110
 	.equ	se_warp_out_pri, 4
 	.equ	se_warp_out_rev, reverb_set+50
 	.equ	se_warp_out_mvl, 127

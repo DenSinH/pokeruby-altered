@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_encounter_aqua_grp, voicegroup062
+	#define mus_encounter_aqua_grp voicegroup062
 	.equ	mus_encounter_aqua_pri, 0
 	.equ	mus_encounter_aqua_rev, reverb_set+50
 	.equ	mus_encounter_aqua_mvl, 127

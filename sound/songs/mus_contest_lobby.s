@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	mus_contest_lobby_grp, voicegroup095
+	#define mus_contest_lobby_grp voicegroup095
 	.equ	mus_contest_lobby_pri, 0
 	.equ	mus_contest_lobby_rev, reverb_set+50
 	.equ	mus_contest_lobby_mvl, 127
