@@ -3,7 +3,8 @@
 
 #define FLASH_BASE ((u8 *)0xE000000)
 
-#define FLASH_WRITE(addr, data) ((*(vu8 *)(FLASH_BASE + (addr))) = (data))
+extern void HelperFlashWrite(void* addr, u32 data);
+#define FLASH_WRITE(addr, data) HelperFlashWrite((vu8 *)(FLASH_BASE + (addr)), data);
 
 #define FLASH_ROM_SIZE_1M 131072 // 1 megabit ROM
 

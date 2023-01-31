@@ -400,10 +400,10 @@ void SampleFreqSet(u32 freq)
 
     m4aSoundVSyncOn();
 
-    while (*(vu8 *)REG_ADDR_VCOUNT == 159)
+    while (REG_VCOUNT == 159)
         ;
 
-    while (*(vu8 *)REG_ADDR_VCOUNT != 159)
+    while (REG_VCOUNT != 159)
         ;
 
     REG_TM0CNT_H = TIMER_ENABLE | TIMER_1CLK;

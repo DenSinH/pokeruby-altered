@@ -29,14 +29,9 @@
 
 #define CpuFastCopy(src, dest, size) CpuFastSet(src, dest, ((size)/(32/8) & 0x1FFFFF))
 
-#define DmaSet(dmaNum, src, dest, control)        \
-{                                                 \
-    vu32 *dmaRegs = (vu32 *)REG_ADDR_DMA##dmaNum; \
-    dmaRegs[0] = (vu32)(src);                     \
-    dmaRegs[1] = (vu32)(dest);                    \
-    dmaRegs[2] = (vu32)(control);                 \
-    dmaRegs[2];                                   \
-}
+extern void HelperDmaSet(u32 dmaNum, void* src, void* dest, u32 control);
+
+#define DmaSet(dmaNum, src, dest, control) { HelperDmaSet(dmaNum, src, dest, control); }
 
 #define DMA_FILL(dmaNum, value, dest, size, bit)                                              \
 {                                                                                             \
@@ -76,13 +71,10 @@
 #define DmaCopy16(dmaNum, src, dest, size) DMA_COPY(dmaNum, src, dest, size, 16)
 #define DmaCopy32(dmaNum, src, dest, size) DMA_COPY(dmaNum, src, dest, size, 32)
 
-#define DmaStop(dmaNum)                                         \
-{                                                               \
-    vu16 *dmaRegs = (vu16 *)REG_ADDR_DMA##dmaNum;               \
-    dmaRegs[5] &= ~(DMA_START_MASK | DMA_DREQ_ON | DMA_REPEAT); \
-    dmaRegs[5] &= ~DMA_ENABLE;                                  \
-    dmaRegs[5];                                                 \
-}
+extern void HelperDmaStop(u32 dmaNum);
+
+#define DmaStop(dmaNum) { HelperDmaStop(dmaNum); }
+
 
 #define DmaCopyLarge(dmaNum, src, dest, size, block, bit) \
 {                                                         \

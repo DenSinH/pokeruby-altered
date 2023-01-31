@@ -3,6 +3,8 @@
 
 #include <stddef.h>
 
+#include "types.h"
+
 #define TRUE  1
 #define FALSE 0
 
@@ -14,14 +16,21 @@
 
 #define ALIGNED(n) __attribute__((aligned(n)))
 
-#define SOUND_INFO_PTR (*(struct SoundInfo **)0x3007FF0)
-#define INTR_CHECK     (*(u16 *)0x3007FF8)
-#define INTR_VECTOR    (*(void **)0x3007FFC)
+extern struct SoundInfo* sound_info;
+extern u32 intr_check;
+extern u32 intr_vector;
 
-#define EWRAM 0x2000000
-#define IWRAM 0x3000000
+#define SOUND_INFO_PTR (*(struct SoundInfo **)&sound_info)
+#define INTR_CHECK     (*(u16 *)&intr_check)
+#define INTR_VECTOR    (*(void **)&intr_vector)
 
-#define PLTT      0x5000000
+extern u8 mem_ewram[0x40000];
+extern u8 mem_iwram[0x8000];
+#define EWRAM mem_ewram
+#define IWRAM mem_iwram
+
+extern u8 mem_pltt[0x400];
+#define PLTT      (uintptr_t)mem_pltt
 #define PLTT_SIZE 0x400
 
 #define BG_PLTT      PLTT
@@ -30,7 +39,8 @@
 #define OBJ_PLTT      (PLTT + 0x200)
 #define OBJ_PLTT_SIZE 0x200
 
-#define VRAM      0x6000000
+extern u8 mem_vram[0x18000];
+#define VRAM      (uintptr_t)mem_vram
 #define VRAM_SIZE 0x18000
 
 #define BG_VRAM           VRAM
@@ -47,7 +57,8 @@
 #define OBJ_VRAM1      (void *)(VRAM + 0x14000)
 #define OBJ_VRAM1_SIZE 0x4000
 
-#define OAM      0x7000000
+extern u8 mem_oam[0x400];
+#define OAM      (uintptr_t)mem_oam
 #define OAM_SIZE 0x400
 
 #define DISPLAY_WIDTH  240

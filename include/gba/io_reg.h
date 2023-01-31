@@ -1,7 +1,12 @@
 #ifndef GUARD_GBA_IO_REG_H
 #define GUARD_GBA_IO_REG_H
 
-#define REG_BASE 0x4000000 // I/O register base address
+#include "types.h"
+
+extern u8 IORegisters[0x400];
+extern vu8* RegisterAccessIntercept(u32 offset);
+#define REG_BASE ((u8*)IORegisters) // I/O register base address
+#define GBA_IO_BASE 0x4000000
 
 // I/O register offsets
 
@@ -345,7 +350,7 @@
 
 #define REG_DISPCNT     (*(vu16 *)REG_ADDR_DISPCNT)
 #define REG_DISPSTAT    (*(vu16 *)REG_ADDR_DISPSTAT)
-#define REG_VCOUNT      (*(vu16 *)REG_ADDR_VCOUNT)
+#define REG_VCOUNT      (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_VCOUNT))
 #define REG_BG0CNT      (*(vu16 *)REG_ADDR_BG0CNT)
 #define REG_BG1CNT      (*(vu16 *)REG_ADDR_BG1CNT)
 #define REG_BG2CNT      (*(vu16 *)REG_ADDR_BG2CNT)
@@ -426,50 +431,50 @@
 #define REG_SOUNDBIAS   (*(vu16 *)REG_ADDR_SOUNDBIAS)
 #define REG_SOUNDBIAS_L (*(vu8  *)REG_ADDR_SOUNDBIAS_L)
 #define REG_SOUNDBIAS_H (*(vu8  *)REG_ADDR_SOUNDBIAS_H)
-#define REG_WAVE_RAM0   (*(vu32 *)REG_ADDR_WAVE_RAM0)
-#define REG_WAVE_RAM1   (*(vu32 *)REG_ADDR_WAVE_RAM1)
-#define REG_WAVE_RAM2   (*(vu32 *)REG_ADDR_WAVE_RAM2)
-#define REG_WAVE_RAM3   (*(vu32 *)REG_ADDR_WAVE_RAM3)
-#define REG_FIFO_A      (*(vu32 *)REG_ADDR_FIFO_A)
-#define REG_FIFO_B      (*(vu32 *)REG_ADDR_FIFO_B)
+#define REG_WAVE_RAM0   (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_WAVE_RAM0))
+#define REG_WAVE_RAM1   (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_WAVE_RAM1))
+#define REG_WAVE_RAM2   (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_WAVE_RAM2))
+#define REG_WAVE_RAM3   (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_WAVE_RAM3))
+#define REG_FIFO_A      (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_FIFO_A))
+#define REG_FIFO_B      (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_FIFO_B))
 
-#define REG_DMA0SAD     (*(vu32 *)REG_ADDR_DMA0SAD)
-#define REG_DMA0DAD     (*(vu32 *)REG_ADDR_DMA0DAD)
-#define REG_DMA0CNT     (*(vu32 *)REG_ADDR_DMA0CNT)
-#define REG_DMA0CNT_L   (*(vu16 *)REG_ADDR_DMA0CNT_L)
-#define REG_DMA0CNT_H   (*(vu16 *)REG_ADDR_DMA0CNT_H)
+#define REG_DMA0SAD     (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_DMA0SAD))
+#define REG_DMA0DAD     (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_DMA0DAD))
+#define REG_DMA0CNT     (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_DMA0CNT))
+#define REG_DMA0CNT_L   (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_DMA0CNT_L))
+#define REG_DMA0CNT_H   (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_DMA0CNT_H))
 
-#define REG_DMA1SAD     (*(vu32 *)REG_ADDR_DMA1SAD)
-#define REG_DMA1DAD     (*(vu32 *)REG_ADDR_DMA1DAD)
-#define REG_DMA1CNT     (*(vu32 *)REG_ADDR_DMA1CNT)
-#define REG_DMA1CNT_L   (*(vu16 *)REG_ADDR_DMA1CNT_L)
-#define REG_DMA1CNT_H   (*(vu16 *)REG_ADDR_DMA1CNT_H)
+#define REG_DMA1SAD     (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_DMA1SAD))
+#define REG_DMA1DAD     (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_DMA1DAD))
+#define REG_DMA1CNT     (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_DMA1CNT))
+#define REG_DMA1CNT_L   (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_DMA1CNT_L))
+#define REG_DMA1CNT_H   (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_DMA1CNT_H))
 
-#define REG_DMA2SAD     (*(vu32 *)REG_ADDR_DMA2SAD)
-#define REG_DMA2DAD     (*(vu32 *)REG_ADDR_DMA2DAD)
-#define REG_DMA2CNT     (*(vu32 *)REG_ADDR_DMA2CNT)
-#define REG_DMA2CNT_L   (*(vu16 *)REG_ADDR_DMA2CNT_L)
-#define REG_DMA2CNT_H   (*(vu16 *)REG_ADDR_DMA2CNT_H)
+#define REG_DMA2SAD     (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_DMA2SAD))
+#define REG_DMA2DAD     (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_DMA2DAD))
+#define REG_DMA2CNT     (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_DMA2CNT))
+#define REG_DMA2CNT_L   (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_DMA2CNT_L))
+#define REG_DMA2CNT_H   (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_DMA2CNT_H))
 
-#define REG_DMA3SAD     (*(vu32 *)REG_ADDR_DMA3SAD)
-#define REG_DMA3DAD     (*(vu32 *)REG_ADDR_DMA3DAD)
-#define REG_DMA3CNT     (*(vu32 *)REG_ADDR_DMA3CNT)
-#define REG_DMA3CNT_L   (*(vu16 *)REG_ADDR_DMA3CNT_L)
-#define REG_DMA3CNT_H   (*(vu16 *)REG_ADDR_DMA3CNT_H)
+#define REG_DMA3SAD     (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_DMA3SAD))
+#define REG_DMA3DAD     (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_DMA3DAD))
+#define REG_DMA3CNT     (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_DMA3CNT))
+#define REG_DMA3CNT_L   (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_DMA3CNT_L))
+#define REG_DMA3CNT_H   (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_DMA3CNT_H))
 
-#define REG_TMCNT(n)    (*(vu16 *)(REG_ADDR_TMCNT + ((n) * 4)))
-#define REG_TM0CNT      (*(vu32 *)REG_ADDR_TM0CNT)
-#define REG_TM0CNT_L    (*(vu16 *)REG_ADDR_TM0CNT_L)
-#define REG_TM0CNT_H    (*(vu16 *)REG_ADDR_TM0CNT_H)
-#define REG_TM1CNT      (*(vu32 *)REG_ADDR_TM1CNT)
-#define REG_TM1CNT_L    (*(vu16 *)REG_ADDR_TM1CNT_L)
-#define REG_TM1CNT_H    (*(vu16 *)REG_ADDR_TM1CNT_H)
-#define REG_TM2CNT      (*(vu32 *)REG_ADDR_TM2CNT)
-#define REG_TM2CNT_L    (*(vu16 *)REG_ADDR_TM2CNT_L)
-#define REG_TM2CNT_H    (*(vu16 *)REG_ADDR_TM2CNT_H)
-#define REG_TM3CNT      (*(vu32 *)REG_ADDR_TM3CNT)
-#define REG_TM3CNT_L    (*(vu16 *)REG_ADDR_TM3CNT_L)
-#define REG_TM3CNT_H    (*(vu16 *)REG_ADDR_TM3CNT_H)
+#define REG_TMCNT(n)    (*(vu16 *)(RegisterAccessIntercept(REG_OFFSET_TMCNT + ((n)) * 4)))
+#define REG_TM0CNT      (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_TM0CNT))
+#define REG_TM0CNT_L    (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_TM0CNT_L))
+#define REG_TM0CNT_H    (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_TM0CNT_H))
+#define REG_TM1CNT      (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_TM1CNT))
+#define REG_TM1CNT_L    (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_TM1CNT_L))
+#define REG_TM1CNT_H    (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_TM1CNT_H))
+#define REG_TM2CNT      (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_TM2CNT))
+#define REG_TM2CNT_L    (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_TM2CNT_L))
+#define REG_TM2CNT_H    (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_TM2CNT_H))
+#define REG_TM3CNT      (*(vu32 *)RegisterAccessIntercept(REG_OFFSET_TM3CNT))
+#define REG_TM3CNT_L    (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_TM3CNT_L))
+#define REG_TM3CNT_H    (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_TM3CNT_H))
 
 #define REG_SIOCNT      (*(vu16 *)REG_ADDR_SIOCNT)
 #define REG_SIODATA8    (*(vu16 *)REG_ADDR_SIODATA8)
@@ -481,14 +486,14 @@
 #define REG_SIOMULTI2   (*(vu16 *)REG_ADDR_SIOMULTI2)
 #define REG_SIOMULTI3   (*(vu16 *)REG_ADDR_SIOMULTI3)
 
-#define REG_KEYINPUT    (*(vu16 *)REG_ADDR_KEYINPUT)
+#define REG_KEYINPUT    (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_KEYINPUT))
 #define REG_KEYCNT      (*(vu16 *)REG_ADDR_KEYCNT)
 
 #define REG_RCNT        (*(vu16 *)REG_ADDR_RCNT)
 
-#define REG_IME         (*(vu16 *)REG_ADDR_IME)
-#define REG_IE          (*(vu16 *)REG_ADDR_IE)
-#define REG_IF          (*(vu16 *)REG_ADDR_IF)
+#define REG_IME         (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_IME))
+#define REG_IE          (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_IE))
+#define REG_IF          (*(vu16 *)RegisterAccessIntercept(REG_OFFSET_IF))
 
 #define REG_WAITCNT     (*(vu16 *)REG_ADDR_WAITCNT)
 

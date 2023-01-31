@@ -1201,7 +1201,10 @@ static void Task_IntroSpinAndZoomPokeball(u8 taskId)
     {
         gTasks[taskId].func = Task_IntroWaitToSetupPart3DoubleFight;
     }
-    sub_813CE30(0x78, 0x50, 0x10000 / gTasks[taskId].data[1], gTasks[taskId].data[0]);
+
+    // prevent division by 0 here
+    if (gTasks[taskId].data[1])
+      sub_813CE30(0x78, 0x50, 0x10000 / gTasks[taskId].data[1], gTasks[taskId].data[0]);
     if (gIntroFrameCounter == 44)
         BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, FADE_COLOR_WHITE);
 }

@@ -397,15 +397,15 @@ extern const struct PokemonCrySong gPokemonCrySongTemplate;
 
 extern const struct ToneData voicegroup000;
 
-extern char gNumMusicPlayers[];
-extern char gMaxLines[];
+extern u32 gNumMusicPlayers;
+extern u32 gMaxLines;
 
 #define NUM_MUSIC_PLAYERS ((u16)gNumMusicPlayers)
 #define MAX_LINES ((u32)gMaxLines)
 
 u32 umul3232H32(u32 multiplier, u32 multiplicand);
 void SoundMain(void);
-void SoundMainBTM(void);
+void SoundMainBTM(void* dest);
 void TrackStop(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track);
 void MPlayMain(struct MusicPlayerInfo *);
 void RealClearChain(void *x);
