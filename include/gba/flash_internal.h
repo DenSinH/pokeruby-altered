@@ -60,6 +60,7 @@ extern u8 gFlashTimeoutFlag;
 extern const struct FlashSetupInfo MX29L010;
 extern const struct FlashSetupInfo LE26FV10N1TS;
 extern const struct FlashSetupInfo DefaultFlash;
+extern const struct FlashSetupInfo PortFlash;
 
 void SwitchFlashBank(u8 bankNum);
 u16 ReadFlashId(void);
