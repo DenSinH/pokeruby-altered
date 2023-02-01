@@ -1302,6 +1302,7 @@ static void ApplyAffineAnimFrameRelativeAndUpdateMatrix(u8 matrixNum, struct Aff
 static s16 ConvertScaleParam(s16 scale)
 {
     s32 val = 0x10000;
+    if (!scale) return INT16_MAX;
     return val / scale;
 }
 

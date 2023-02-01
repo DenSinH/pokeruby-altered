@@ -372,6 +372,9 @@ u8 *ConvertIntToDecimalString(u8 *dest, s32 value)
 
 u8 *StringExpandPlaceholders(u8 *dest, const u8 *src)
 {
+#if !defined(NDEBUG) && defined(PORT_DEBUG_CHECKS)
+    const u8* const original_dest = dest;
+#endif
     for (;;)
     {
         u8 c = *src++;
@@ -395,6 +398,11 @@ u8 *StringExpandPlaceholders(u8 *dest, const u8 *src)
             break;
         case EOS:
             *dest = EOS;
+#if !defined(NDEBUG) && defined(PORT_DEBUG_CHECKS)
+            if (dest - original_dest > SCRIPT_EXPAND_BUFFER_SIZE) {
+              log_fatal("Buffer overflow in expand buffers");
+            }
+#endif
             return dest;
         case 0xFA:
         case 0xFB:
@@ -407,6 +415,10 @@ u8 *StringExpandPlaceholders(u8 *dest, const u8 *src)
 
 u8 *StringBraille(u8 *dest, const u8 *src)
 {
+#if !defined(NDEBUG) && defined(PORT_DEBUG_CHECKS)
+  const u8* const original_dest = dest;
+#endif
+
     u8 setBrailleFont[] = { 0xFC, 0x06, 0x06, 0xFF };
     u8 gotoLine2[] = { 0xFE, 0xFC, 0x0E, 0x02, 0xFF };
 
@@ -420,6 +432,11 @@ u8 *StringBraille(u8 *dest, const u8 *src)
         {
         case EOS:
             *dest = c;
+#if !defined(NDEBUG) && defined(PORT_DEBUG_CHECKS)
+            if (dest - original_dest > SCRIPT_EXPAND_BUFFER_SIZE) {
+              log_fatal("Buffer overflow in expand buffers");
+            }
+#endif
             return dest;
         case 0xFE:
             dest = StringCopy(dest, gotoLine2);

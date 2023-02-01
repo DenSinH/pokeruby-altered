@@ -229,6 +229,8 @@ void DrawDoorMetatileAt(int x, int y, u16 *arr)
 static void DrawMetatileAt(struct MapLayout *mapLayout, u16 offset, int x, int y)
 {
     u16 *metatiles;
+
+    // this goes wrong for x = 12 and y = 7
     u16 metatileId = MapGridGetMetatileIdAt(x, y);
 
     if (metatileId > NUM_METATILES_TOTAL)

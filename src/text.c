@@ -190,10 +190,12 @@ static struct GlyphBuffer sGlyphBuffer;
 
 EWRAM_DATA u16 gBGTilemapBuffers[4][0x400] = {0};
 
-EWRAM_DATA u8 gStringVar1[0x100] = {0};
-EWRAM_DATA u8 gStringVar2[0x100] = {0};
-EWRAM_DATA u8 gStringVar3[0x100] = {0};
-EWRAM_DATA u8 gStringVar4[0x100] = {0};
+// 0x100 was the original value, this is literally not
+// even enough to hold the first dialog (from mom).
+EWRAM_DATA u8 gStringVar1[SCRIPT_EXPAND_BUFFER_SIZE] = {0};
+EWRAM_DATA u8 gStringVar2[SCRIPT_EXPAND_BUFFER_SIZE] = {0};
+EWRAM_DATA u8 gStringVar3[SCRIPT_EXPAND_BUFFER_SIZE] = {0};
+EWRAM_DATA u8 gStringVar4[SCRIPT_EXPAND_BUFFER_SIZE] = {0};
 
 extern u16 gBattleTypeFlags;
 extern u8 gIsLinkContest;

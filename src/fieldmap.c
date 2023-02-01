@@ -90,10 +90,20 @@ void sub_80560AC(struct MapHeader *mapHeader)
     // is NULL, causing count to be assigned a garbage value. This garbage value
     // just so happens to have the most significant bit set, so it is treated as
     // negative and the loop below thankfully never executes in this scenario.
-    int count = mapHeader->connections->count;
-    struct MapConnection *connection = mapHeader->connections->connections;
-    int i;
+    int count;
+    struct MapConnection *connection;
 
+    // fixed:
+    if (!mapHeader->connections) {
+      count = -1;
+      connection = NULL;
+    }
+    else {
+      count = mapHeader->connections->count;
+      connection = mapHeader->connections->connections;
+    }
+
+    int i;
     gMapConnectionFlags = sDummyConnectionFlags;
     for (i = 0; i < count; i++, connection++)
     {
@@ -400,8 +410,8 @@ u32 MapGridGetMetatileIdAt(int x, int y)
     u16 *border;
     u16 block2;
 
-    if (x >= 0 && x < gBackupMapLayout.width
-     && y >= 0 && y < gBackupMapLayout.height)
+    if ((x >= 0) && (x < gBackupMapLayout.width)
+     && (y >= 0) && (y < gBackupMapLayout.height))
     {
         block = gBackupMapLayout.map[x + gBackupMapLayout.width * y];
     }
