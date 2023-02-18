@@ -3038,74 +3038,77 @@ static void sub_80A12D0(s8 a)
     gTasks[newTaskId].data[2] = 1;
 }
 
-// void sub_80A1334(u8 taskId)
-// {
-//     u8 i;
-//     s16 var1;
+// this was in the decomp, with a naked function below
+#ifdef NONMATCHING
+void sub_80A1334(u8 taskId)
+{
+   u8 i;
+   s16 var1;
 
-//     gTasks[taskId].data[1] += gTasks[taskId].data[0];
+   gTasks[taskId].data[1] += gTasks[taskId].data[0];
 
-//     var1 = 0;
-//     if (gTasks[taskId].data[1] >= 0)
-//     {
-//         var1 = 10;
-//         if (gTasks[taskId].data[1] < 10)
-//         {
-//             var1 = gTasks[taskId].data[1];
-//         }
-//     }
+   var1 = 0;
+   if (gTasks[taskId].data[1] >= 0)
+   {
+       var1 = 10;
+       if (gTasks[taskId].data[1] < 10)
+       {
+           var1 = gTasks[taskId].data[1];
+       }
+   }
 
-//     if (var1 > 0)
-//     {
-//         u8 *vramAddr = (u8 *)(VRAM + 0x5B40);
-//         for (i = 0; i < 7; i++)
-//         {
-//             CpuSet(&gUnknown_08E73E88[(i + 13) * 64], vramAddr, var1 & 0x1FFFFF);
-//             vramAddr += 64;
-//         }
-//     }
+   if (var1 > 0)
+   {
+       u8 *vramAddr = (u8 *)(VRAM + 0x5B40);
+       for (i = 0; i < 7; i++)
+       {
+           CpuSet(&gUnknown_08E73E88[(i + 13) * 64], vramAddr, var1 & 0x1FFFFF);
+           vramAddr += 64;
+       }
+   }
 
-//     if (var1 <= 9)
-//     {
-//         u8 *vramAddr = (u8 *)(VRAM + 0x5B40);
-//         for (i = 0; i < 64; i++)
-//         {
-//             u16 val = gTasks[taskId].data[2];
-//             CpuSet(&val, vramAddr, ((10 - var1) & 0x1FFFFF) | 0x800000);
-//         }
-//     }
-//     else
-//     {
-//         Menu_EraseWindowRect(0, 19, 9, 19);
-//     }
+   if (var1 <= 9)
+   {
+       u8 *vramAddr = (u8 *)(VRAM + 0x5B40);
+       for (i = 0; i < 64; i++)
+       {
+           u16 val = gTasks[taskId].data[2];
+           CpuSet(&val, vramAddr, ((10 - var1) & 0x1FFFFF) | 0x800000);
+       }
+   }
+   else
+   {
+       Menu_EraseWindowRect(0, 19, 9, 19);
+   }
 
-//     if (gTasks[taskId].data[0] == 0 || gTasks[taskId].data[1] < 0)
-//     {
-//         if (pssData.page == PSS_PAGE_BATTLE_MOVES)
-//         {
-//             Menu_EraseWindowRect(0, 14, 9, 18);
-//             sub_80A0958(pssData.loadedMon);
+   if (gTasks[taskId].data[0] == 0 || gTasks[taskId].data[1] < 0)
+   {
+       if (pssData.page == PSS_PAGE_BATTLE_MOVES)
+       {
+           Menu_EraseWindowRect(0, 14, 9, 18);
+           sub_80A0958(&pssData.loadedMon);
 
-//             if (GetMonStatusAndPokerus(pssData.loadedMon))
-//             {
-//                 SummaryScreen_PrintColoredText(gOtherText_Status, 13, 1, 18);
-//             }
+           if (GetMonStatusAndPokerus(pssData.loadedMon))
+           {
+               SummaryScreen_PrintColoredText(gOtherText_Status, 13, 1, 18);
+           }
 
-//             DestroyTask(taskId);
-//         }
-//     }
+           DestroyTask(taskId);
+       }
+   }
 
-//     if (gTasks[taskId].data[1] > 9)
-//     {
-//         if (pssData.page == PSS_PAGE_BATTLE_MOVES)
-//         {
-//             sub_80A00F4(gTasks[taskId].data[3]);
-//         }
+   if (gTasks[taskId].data[1] > 9)
+   {
+       if (pssData.page == PSS_PAGE_BATTLE_MOVES)
+       {
+           sub_80A00F4(gTasks[taskId].data[3]);
+       }
 
-//         sub_80A0428(pssData.loadedMon, &gTasks[taskId].data[3]);
-//         DestroyTask(taskId);
-//     }
-// }
+       sub_80A0428(&pssData.loadedMon, &gTasks[taskId].data[3]);
+       DestroyTask(taskId);
+   }
+}
+#else
 NAKED
 static void sub_80A1334(u8 taskId)
 {
@@ -3277,6 +3280,7 @@ _080A1480: .4byte gSharedMem + 0x18000\n\
 _080A1484: .4byte gOtherText_Status\n\
     .syntax divided\n");
 }
+#endif
 
 // Related to re-drawing the summary area underneath the pokemon's picture
 // in all of the summary screen tabs.

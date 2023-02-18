@@ -682,14 +682,19 @@ void sub_8043DB0(u8 a)
 {
     gSprites[a].invisible = TRUE;
     gSprites[gSprites[a].data[5]].invisible = TRUE;
-    gSprites[gSprites[a].oam.affineParam].invisible = TRUE;
+    // todo: same as function below
+    if (gSprites[a].oam.affineParam < MAX_SPRITES)
+        gSprites[gSprites[a].oam.affineParam].invisible = TRUE;
 }
 
 void sub_8043DFC(u8 a)
 {
     gSprites[a].invisible = FALSE;
     gSprites[gSprites[a].data[5]].invisible = FALSE;
-    gSprites[gSprites[a].oam.affineParam].invisible = FALSE;
+    // todo: this seems to go wrong, the value in affineParam is an actual affine parameter,
+    //       and not a sprite ID. as a quick fix I just check if it is a valid sprite ID
+    if (gSprites[a].oam.affineParam < MAX_SPRITES)
+      gSprites[gSprites[a].oam.affineParam].invisible = FALSE;
 }
 
 static void sub_8043E50(u8 spriteId, s16 x, s16 y)

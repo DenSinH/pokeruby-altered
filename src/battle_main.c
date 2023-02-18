@@ -3128,7 +3128,9 @@ void sub_8010384(struct Sprite *sprite)
     else
         species = sprite->data[2];
 
-    GetMonData(&gEnemyParty[gBattlerPartyIndexes[r6]], MON_DATA_PERSONALITY);  // Unused return value
+    // this breaks somehow
+    // it seems the value is unused anyway...
+//    GetMonData(&gEnemyParty[gBattlerPartyIndexes[r6]], MON_DATA_PERSONALITY);  // Unused return value
 
     if (species == SPECIES_UNOWN)
     {

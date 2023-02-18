@@ -115,6 +115,9 @@ union AffineAnimCmd
     struct AffineAnimLoopCmd loop;
     struct AffineAnimJumpCmd jump;
     struct AffineAnimEndCmdAlt end; // unused in code
+    // game expects data in .s files to be aligned by 4 bytes, 
+    // while this union's size was only 6 bytes, breaking animations
+    u64 size_fix;
 };
 
 #define AFFINEANIMCMDTYPE_LOOP 0x7FFD
